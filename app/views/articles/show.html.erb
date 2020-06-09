@@ -1,0 +1,11 @@
+<div class="header">
+  <p><%= link_to "Wiki anonima UwU", articles_path %></p>
+  <p><%= link_to "new article", new_article_path %></p>
+</div>
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+<%= link_to "update this article", edit_article_path(@article) %>
+<%= link_to "Delete this article",
+            article_path(@article),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
